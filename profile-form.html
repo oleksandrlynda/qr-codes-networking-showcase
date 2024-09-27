@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Your Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div class="max-w-3xl mx-auto p-6">
+    <div class="bg-white p-8 rounded shadow-md">
+      <h1 class="text-3xl font-bold mb-6 text-center">Create Your Profile</h1>
+      <form action="profile.html" method="post" enctype="multipart/form-data">
+        <!-- Mandatory Fields -->
+        <h2 class="text-2xl font-semibold mb-4">Basic Information <span class="text-red-500">*</span></h2>
+        <!-- Profile Picture -->
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="profilePicture">Profile Picture <span class="text-red-500">*</span></label>
+          <input type="file" name="profilePicture" id="profilePicture" accept="image/*" required class="w-full px-3 py-2 border rounded">
+        </div>
+        <!-- Full Name -->
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="fullName">Full Name <span class="text-red-500">*</span></label>
+          <input type="text" name="fullName" id="fullName" required class="w-full px-3 py-2 border rounded" placeholder="Enter your full name">
+        </div>
+        <!-- Professional Title -->
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="professionalTitle">Professional Title</label>
+          <input type="text" name="professionalTitle" id="professionalTitle" class="w-full px-3 py-2 border rounded" placeholder="e.g., Product Manager at XYZ Corp">
+        </div>
+        <!-- Introduction -->
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="introduction">Introduction <span class="text-red-500">*</span></label>
+          <textarea name="introduction" id="introduction" rows="3" required class="w-full px-3 py-2 border rounded" placeholder="Write a brief introduction about yourself"></textarea>
+        </div>
+        <!-- What You're Seeking -->
+        <div class="mb-8">
+          <label class="block text-gray-700 font-semibold mb-2" for="seeking">What You're Seeking <span class="text-red-500">*</span></label>
+          <textarea name="seeking" id="seeking" rows="2" required class="w-full px-3 py-2 border rounded" placeholder="Describe what you're looking for (e.g., mentors, investors)"></textarea>
+        </div>
+
+        <!-- Optional Sections -->
+        <!-- Professional Experience -->
+        <h2 class="text-2xl font-semibold mb-4">Professional Experience</h2>
+        <!-- Current Position -->
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="currentPosition">Current Position</label>
+          <input type="text" name="currentPosition" id="currentPosition" class="w-full px-3 py-2 border rounded" placeholder="Job Title">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="currentCompany">Company Name</label>
+          <input type="text" name="currentCompany" id="currentCompany" class="w-full px-3 py-2 border rounded" placeholder="Company Name">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-semibold mb-2" for="currentDuration">Duration</label>
+          <input type="text" name="currentDuration" id="currentDuration" class="w-full px-3 py-2 border rounded" placeholder="e.g., June 2020 – Present">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2" for="currentDescription">Brief Description</label>
+          <textarea name="currentDescription" id="currentDescription" rows="3" class="w-full px-3 py-2 border rounded" placeholder="Describe your roles and responsibilities"></textarea>
+        </div>
+        <!-- Previous Positions -->
+        <div class="mb-8">
+          <label class="block text-gray-700 font-semibold mb-2" for="previousPositions">Previous Positions</label>
+          <textarea name="previousPositions" id="previousPositions" rows="3" class="w-full px-3 py-2 border rounded" placeholder="List previous roles and companies"></textarea>
+        </div>
+
+        <!-- Education -->
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2" for="education">Degrees and Institutions</label>
+          <textarea name="education" id="education" rows="3" class="w-full px-3 py-2 border rounded" placeholder="e.g., MBA in Technology Management, University of Innovation"></textarea>
+        </div>
+
+        <!-- Hobbies and Interests -->
+        <h2 class="text-2xl font-semibold mb-4">Hobbies and Interests</h2>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2" for="hobbies">List Your Hobbies</label>
+          <textarea name="hobbies" id="hobbies" rows="2" class="w-full px-3 py-2 border rounded" placeholder="e.g., Traveling, Photography, Cooking"></textarea>
+        </div>
+
+        <!-- Dreams -->
+        <h2 class="text-2xl font-semibold mb-4">Dreams</h2>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2" for="dreams">Your Dreams</label>
+          <textarea name="dreams" id="dreams" rows="2" class="w-full px-3 py-2 border rounded" placeholder="Share your aspirations"></textarea>
+        </div>
+
+        <!-- Pets -->
+        <h2 class="text-2xl font-semibold mb-4">Pets</h2>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2" for="pets">Do You Have Pets?</label>
+          <input type="text" name="pets" id="pets" class="w-full px-3 py-2 border rounded" placeholder="e.g., Golden Retriever named Max">
+        </div>
+
+        <!-- Something Special About Work -->
+        <h2 class="text-2xl font-semibold mb-4">Something Special About Your Work</h2>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2" for="specialWork">Special Work Achievements</label>
+          <textarea name="specialWork" id="specialWork" rows="3" class="w-full px-3 py-2 border rounded" placeholder="Describe something unique about your work"></textarea>
+        </div>
+
+        <!-- Certifications -->
+        <h2 class="text-2xl font-semibold mb-4">Certifications</h2>
+        <div class="mb-6">
+          <label class="block text-gray-700 font-semibold mb-2" for="certifications">List Your Certifications</label>
+          <textarea name="certifications" id="certifications" rows="2" class="w-full px-3 py-2 border rounded" placeholder="e.g., PMP, Certified Scrum Master"></textarea>
+        </div>
+
+        <!-- Languages -->
+        <h2 class="text-2xl font-semibold mb-4">Languages</h2>
+        <div class="mb-8">
+          <label class="block text-gray-700 font-semibold mb-2" for="languages">Languages You Speak</label>
+          <textarea name="languages" id="languages" rows="2" class="w-full px-3 py-2 border rounded" placeholder="e.g., English – Native, Spanish – Fluent"></textarea>
+        </div>
+
+        <!-- LinkedIn Profile -->
+        <h2 class="text-2xl font-semibold mb-4">LinkedIn Profile</h2>
+        <div class="mb-8">
+          <label class="block text-gray-700 font-semibold mb-2" for="linkedin">LinkedIn URL</label>
+          <input type="url" name="linkedin" id="linkedin" class="w-full px-3 py-2 border rounded" placeholder="https://www.linkedin.com/in/yourprofile">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Create Profile</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- JavaScript to handle form submission -->
+  <script>
+    document.getElementById('profileForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Collect form data
+      const formData = {
+        profilePicture: document.getElementById('profilePicture').files[0] ? URL.createObjectURL(document.getElementById('profilePicture').files[0]) : '',
+        fullName: document.getElementById('fullName').value,
+        professionalTitle: document.getElementById('professionalTitle').value,
+        introduction: document.getElementById('introduction').value,
+        seeking: document.getElementById('seeking').value,
+        currentPosition: document.getElementById('currentPosition').value,
+        currentCompany: document.getElementById('currentCompany').value,
+        currentDuration: document.getElementById('currentDuration').value,
+        currentDescription: document.getElementById('currentDescription').value,
+        previousPositions: document.getElementById('previousPositions').value,
+        education: document.getElementById('education').value,
+        hobbies: document.getElementById('hobbies').value,
+        dreams: document.getElementById('dreams').value,
+        pets: document.getElementById('pets').value,
+        specialWork: document.getElementById('specialWork').value,
+        certifications: document.getElementById('certifications').value,
+        languages: document.getElementById('languages').value,
+        linkedin: document.getElementById('linkedin').value
+      };
+
+      // Store data in localStorage
+      localStorage.setItem('profileData', JSON.stringify(formData));
+
+      // Redirect to profile.html
+      window.location.href = 'profile.html';
+    });
+  </script>
+</body>
+</html>
